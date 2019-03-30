@@ -18,30 +18,38 @@ public class Jokenpo {
 		}		
 	}
 	
-	public static Boolean resultadoPo(Jogador jogador, Jogador jogador2) {
+	public static Jogador resultadoPo(Jogador jogador, Jogador jogador2) {
 		if(jogador.getEscolha() == jogador2.getEscolha()) {
 			System.out.println("Empatou!");
-			return true;
+			jogador.setResultado("Empate");
+			return jogador;
 		}else if(jogador.getEscolha() == 0 && jogador2.getEscolha() == 1) {
 			System.out.println("Pedra ganha da Tesoura, Vitória do Jogador: " + jogador.getNome());
-			return true;
+			jogador.setResultado("Vitória");
+			return jogador;
 		}else if(jogador.getEscolha() == 1 && jogador2.getEscolha() == 2) {
 			System.out.println("Tesoura ganha do Papel, Vitória do Jogador: " + jogador.getNome());
-			return true;
+			jogador.setResultado("Vitória");
+			return jogador;
 		}else if(jogador.getEscolha() == 2 && jogador2.getEscolha() == 0) {
 			System.out.println("Papel ganha da Pedra, Vitória do Jogador: " + jogador.getNome());
-			return true;
+			jogador.setResultado("Vitória");
+			return jogador;
 		}else if(jogador.getEscolha() == 1 && jogador2.getEscolha() == 0) {
 			System.out.println("Pedra ganha da Tesoura, Vitória do Jogador: " + jogador2.getNome());
-			return true;
+			jogador2.setResultado("Vitória");
+			return jogador2;
 		}else if(jogador.getEscolha() == 2 && jogador2.getEscolha() == 1) {
 			System.out.println("Tesoura ganha do Papel, Vitória do Jogador: " + jogador2.getNome());
-			return true;
+			jogador2.setResultado("Vitória");
+			return jogador2;
 		}else if(jogador.getEscolha() == 0 && jogador2.getEscolha() == 2) {
 			System.out.println("Papel ganha da Pedra, Vitória do Jogador: " + jogador2.getNome());
-			return true;
+			jogador2.setResultado("Vitória");
+			return jogador2;
 		}
-		return false;
+		jogador.setResultado("Erro");
+		return jogador;
 	}
 
 }

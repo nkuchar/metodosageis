@@ -4,6 +4,7 @@ public class Jogador {
 
 	private int escolha;
 	private String nome;
+	public String resultado;
 
 	public Jogador() {
 		
@@ -12,6 +13,13 @@ public class Jogador {
 	public Jogador(String nome) {
 		super();
 		this.nome = nome;
+	}
+	
+	public Jogador(int escolha, String nome, String resultado) {
+		super();
+		this.escolha = escolha;
+		this.nome = nome;
+		this.resultado = resultado;
 	}
 	
 	public Jogador(int escolha, String nome) {
@@ -31,5 +39,13 @@ public class Jogador {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getResultado() {
+		return resultado;
+	}
+
+	public void setResultado(String resultado) {
+		this.resultado = resultado;
 	}
 }
